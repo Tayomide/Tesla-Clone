@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { HomeComponent } from "../components/HomeComponent"
 
-const Home = () => {
+export const Home = () => {
   return (
     <HomeContainer>
         Home
@@ -9,8 +9,6 @@ const Home = () => {
     </HomeContainer>
   )
 }
-
-export default Home
 
 const HomeContainer = styled.div`
 
