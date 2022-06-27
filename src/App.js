@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import Home from "./pages/Home"
+import { Home } from "./pages/Home"
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const App = () => {
