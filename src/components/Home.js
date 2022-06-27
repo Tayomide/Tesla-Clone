@@ -97,6 +97,17 @@ const HomeStatic = styled.div`
             flex-direction: row;
         }
     }
+    @media only screen and (min-width: 600px){
+        ul{
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            li{
+                width: 264px;
+            }
+        }
+    }
     ul + p {
         font-size: 14px;
         line-height: 18px;
