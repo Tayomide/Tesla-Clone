@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { Link } from "react-router-dom"
 import { TeslaButton } from "./TeslaButton"
 
-export const HomeComponent = ({mobileImage, desktopImage, altText, title, leftButtonText, rightButtonText, description}) => {
+export const HomeComponent = ({mobileImage, desktopImage, altText, title, leftButtonText, rightButtonText, description, buttonBackground}) => {
   return (
     <HomeComponentContainer>
         <picture>
@@ -11,7 +11,7 @@ export const HomeComponent = ({mobileImage, desktopImage, altText, title, leftBu
             <img src={desktopImage} alt={altText} />
         </picture>
         <HomeStatic>
-            <h1>{title}</h1>
+            <h1 className={buttonBackground ? "bigger" : "normal" }>{title}</h1>
             {
                 typeof description === "string" ? <p>{description}</p> : <p>Order Online for <Link to="/">touchless delivery</Link></p>
             }
@@ -20,7 +20,7 @@ export const HomeComponent = ({mobileImage, desktopImage, altText, title, leftBu
                     <li>
                         <TeslaButton 
                             content = { leftButtonText}
-                            background = "#171a20cc"
+                            background = {buttonBackground ? buttonBackground : "#171a20cc"}
                             border = "transparent"
                             color = "#fff"
                         />
@@ -71,6 +71,10 @@ const HomeStatic = styled.div`
     align-items: center;
     h1{
         margin-top: calc(18vh - 52px);
+    }
+    h1.bigger{
+        font-size: 36px;
+        letter-spacing: 1px;
     }
     h1 + p{
         flex: 1;
