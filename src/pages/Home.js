@@ -5,6 +5,7 @@ const Home = () => {
   return (
     <HomeContainer>
         Home
+        <HomeComponent/>
     </HomeContainer>
   )
 }
