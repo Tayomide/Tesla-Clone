@@ -123,15 +123,15 @@ const NavbarContainer = styled.nav`
     width: 100%;
     z-index: 2;
     color: #171a20;
-    svg{
+    > svg{
         height: 24px;
         width: 120px;
         margin-left: 16px;
     }
-    ul{
+    > ul{
         display: flex;
         flex-direction: row;
-        li{
+        > li{
             display: none;
             width: max-content;
             /* padding: 4px 8px; */
@@ -145,7 +145,7 @@ const NavbarContainer = styled.nav`
                 display: block;
             }
         }
-        li.mobile{
+        > li.mobile{
             display: list-item;
             button{
                 border-radius: 12px;
@@ -154,14 +154,14 @@ const NavbarContainer = styled.nav`
             }
         }
         @media screen and (min-width: 1200px) {
-            li{
+            > li{
                 display: list-item;
-                a,button{
-                    background-color: transparent!important;;
+                > a,> button{
+                    background-color: transparent!important;
                     :hover{
                         border-radius: 12px;
                         backdrop-filter: blur(16px);
-                        background-color: #0000000d;
+                        background-color: #0000000d!important;
                     }
                 }
             }
