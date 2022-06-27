@@ -2,16 +2,16 @@ import styled from "styled-components"
 import { Link } from "react-router-dom"
 import { TeslaButton } from "./TeslaButton"
 
-export const HomeComponent = () => {
+export const HomeComponent = ({mobileImage, desktopImage, altText, title}) => {
   return (
     <HomeComponentContainer>
         <picture>
-            <source media="(min-width: 600px)" srcSet="/M3-Homepage-Desktop.jpg"/>
-            <source srcSet="/M3-Homepage-Mobile.jpg" />
-            <img src="small.jpg" alt="The president giving an award." />
+            <source media="(min-width: 600px)" srcSet={desktopImage}/>
+            <source srcSet={mobileImage} />
+            <img src={desktopImage} alt={altText} />
         </picture>
         <HomeStatic>
-            <h1>Model 3</h1>
+            <h1>{title}</h1>
             <p>Order Online for <Link to="/">touchless delivery</Link></p>
             <ul>
                 <li>
