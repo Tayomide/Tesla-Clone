@@ -78,7 +78,7 @@ const HomeStatic = styled.div`
     }
     h1 + p{
         flex: 1;
-        padding: 6px 24px 0 24px;
+        padding: 6px 0 0 0;
         a{
             text-transform: capitalize;
             border-bottom: 1px solid black;
