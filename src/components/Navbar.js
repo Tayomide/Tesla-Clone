@@ -168,3 +168,160 @@ const NavbarContainer = styled.nav`
         }
     }
 `
+const Overflow = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+    transform: translateX(100vw);
+    /* animation: blur 1s linear forwards; */
+    @keyframes unblur {
+        0%{
+            backdrop-filter: blur(4px);
+            background-color: rgba(0, 0,0, 0.3);
+            transform: translateX(0);
+        }
+        50%{
+            backdrop-filter: blur(2px);
+            background-color: rgba(0, 0,0, 0.15); 
+            transform: translateX(0);
+        }
+        100%{
+            backdrop-filter: blur(0);
+            background-color: rgba(0, 0,0, 0); 
+            transform: translateX(0);
+        }
+    }
+    @keyframes blur {
+        0%{
+            backdrop-filter: blur(0);
+            background-color: rgba(0, 0,0, 0); 
+            transform: translateX(0);
+        }
+        50%{
+            backdrop-filter: blur(2px);
+            background-color: rgba(0, 0,0, 0.15);
+            transform: translateX(0); 
+        }
+        100%{
+            backdrop-filter: blur(4px);
+            background-color: rgba(0, 0,0, 0.3);
+            transform: translateX(0);
+        }
+    }
+    &.unblur{
+        animation: unblur 0.31s linear forwards;
+        ul{
+            animation: fade-out 0.31s linear forwards;
+        }
+    }
+    &.blur{
+        animation: blur 0.31s linear forwards;
+        ul{
+            animation: fade-in 0.31s linear forwards;
+        }
+    }
+    ul{
+        height: 100%;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        width: 300px;
+        background-color: #fff;
+        z-index: 11;
+        padding: 0 8px 48px 32px;
+        position: relative;
+        @keyframes fade-out {
+            0%{
+                transform: translateX(0);
+                opacity: 1;
+            }
+            45%{
+                transform: translateX(40px);
+                opacity: 1;
+            }
+            75%{
+                transform: translateX(70px);
+                opacity: 0.5;
+            }
+            90%{
+                transform: translateX(85px);
+                opacity: 0.1;
+            }
+            100%{
+                transform: translateX(100px);
+                opacity: 0;
+                display: none;
+            }
+        }
+        @keyframes fade-in {
+            0%{
+                transform: translateX(100px);
+                opacity: 0;
+                display: none;
+            }
+            10%{
+                transform: translateX(85px);
+                opacity: 0.1;
+            }
+            25%{
+                transform: translateX(70px);
+                opacity: 0.5;
+            }
+            55%{
+                transform: translateX(40px);
+                opacity: 1;
+            }
+            100%{
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        .close{
+            position: sticky;
+            top: 0;
+            width: 100%;
+            min-height: 80px;
+            padding: 20px 0 20px 20px;
+            display: flex;
+            flex-direction: row-reverse;
+            background-color: #fff;
+            z-index: 14;
+            button{
+                height: 40px;
+                width: 40px;
+                padding: 8px;
+                border-radius: 50%;
+                :hover{
+                    backdrop-filter: blur(16px);
+                    background-color: #0000000d;
+                }
+                svg{
+                    height: 100%;
+                    aspect-ratio: 1 /1;
+                }
+            }
+        }
+        li ~ li{
+            margin-bottom: 8px;
+            width: 100%;
+            a{
+                display: block;
+                width: 100%;
+                padding: 4px 10px;
+                line-height: 24px;
+                font-weight: bold;
+                border-radius: 10px;
+                :hover{
+                    backdrop-filter: blur(16px);
+                    background-color: #0000000d;
+                }
+            }
+        }
+    }
+`
