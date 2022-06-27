@@ -4,7 +4,6 @@ import { HomeComponent } from "../components/HomeComponent"
 export const Home = () => {
   return (
     <HomeContainer>
-        Home
         <HomeComponent/>
     </HomeContainer>
   )
