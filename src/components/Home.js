@@ -12,24 +12,31 @@ export const HomeComponent = ({mobileImage, desktopImage, altText, title, leftBu
         </picture>
         <HomeStatic>
             <h1>{title}</h1>
-            <p>Order Online for <Link to="/">touchless delivery</Link></p>
+            {
+                typeof description === "string" ? <p>{description}</p> : <p>Order Online for <Link to="/">touchless delivery</Link></p>
+            }
             <ul>
-                <li>
-                    <TeslaButton 
-                        content = "Custom Order"
-                        background = "#171a20cc"
-                        border = "transparent"
-                        color = "#fff"
-                    />
-                </li>
-                <li>
-                <TeslaButton 
-                        content = "Existing Inventory"
-                        background = "#f4f4f4a6"
-                        border = "transparent"
-                        color = "#393c41"
-                    />
-                </li>
+                { leftButtonText && 
+                    <li>
+                        <TeslaButton 
+                            content = { leftButtonText}
+                            background = "#171a20cc"
+                            border = "transparent"
+                            color = "#fff"
+                        />
+                    </li>
+                }
+                { rightButtonText &&
+                    <li>
+                        <TeslaButton 
+                                content = {rightButtonText}
+                                background = "#f4f4f4a6"
+                                border = "transparent"
+                                color = "#393c41"
+                        />
+                    </li>
+
+                }
             </ul>
             <p></p>
             <button></button>
