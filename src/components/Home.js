@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { Link } from "react-router-dom"
 import { TeslaButton } from "./TeslaButton"
 
-export const HomeComponent = ({mobileImage, desktopImage, altText, title}) => {
+export const HomeComponent = ({mobileImage, desktopImage, altText, title, leftButtonText, rightButtonText, description}) => {
   return (
     <HomeComponentContainer>
         <picture>
