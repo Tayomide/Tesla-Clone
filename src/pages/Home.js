@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { HomeComponent } from "../components/HomeComponent"
 
 const Home = () => {
   return (
