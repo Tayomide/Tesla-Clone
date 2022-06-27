@@ -7,6 +7,7 @@ const App = () => {
   return (
     <AppContainer>
       <Router>
+        <Navbar />
         <Routes>
           <Route exact path="/" element={<Home />} />
         </Routes>
