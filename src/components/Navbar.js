@@ -36,6 +36,78 @@ export const Navbar = () => {
                 <button>Menu</button>
             </li>
         </ul>
+        <Overflow className={blur}>
+            <ul>
+                <li className='close'>
+                    <button onClick={() => setBlur("unblur")}>
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.53 17.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.748.748 0 0 1-1.06 0 .75.75 0 0 1 0-1.06L10.94 12 5.47 6.53a.75.75 0 1 1 1.06-1.06L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47z" fill="currentColor"></path></svg>
+                    </button>
+                </li>
+                <li>
+                    <Link to="/">Model S</Link>
+                </li>
+                <li>
+                    <Link to="/">Model 3</Link>
+                </li>
+                <li>
+                    <Link to="/">Model X</Link>
+                </li>
+                <li>
+                    <Link to="/">Model Y</Link>
+                </li>
+                <li>
+                    <Link to="/">Solar Roof</Link>
+                </li>
+                <li>
+                    <Link to="/">Solar Panels</Link>
+                </li>
+                <li>
+                    <Link to="/">Existing Inventory</Link>
+                </li>
+                <li>
+                    <Link to="/">Used Inventory</Link>
+                </li>
+                <li>
+                    <Link to="/">Trade-In</Link>
+                </li>
+                <li>
+                    <Link to="/">Test Drive</Link>
+                </li>
+                <li>
+                    <Link to="/">Insurance</Link>
+                </li>
+                <li>
+                    <Link to="/">Powerwall</Link>
+                </li>
+                <li>
+                    <Link to="/">Commercial Energy</Link>
+                </li>
+                <li>
+                    <Link to="/">Utilities</Link>
+                </li>
+                <li>
+                    <Link to="/">Charging</Link>
+                </li>
+                <li>
+                    <Link to="/">Find Us</Link>
+                </li>
+                <li>
+                    <Link to="/">Support</Link>
+                </li>
+                <li>
+                    <Link to="/">Investor Relations</Link>
+                </li>
+                <li>
+                    <Link to="/">Shop</Link>
+                </li>
+                <li>
+                    <Link to="/">Account</Link>
+                </li>
+                <li>
+                    <Link to="/">More</Link>
+                </li>
+            </ul>
+        </Overflow>
     </NavbarContainer>
   )
 }
