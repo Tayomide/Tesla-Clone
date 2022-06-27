@@ -61,6 +61,7 @@ export const Home = () => {
           title = "Accessories"
           leftButtonText = "Shop Now"
           description = ""
+          buttonBackground = "#171a20"
         />
     </HomeContainer>
   )
