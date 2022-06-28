@@ -266,7 +266,7 @@ const Overflow = styled.div`
         height: 100%;
         overflow-y: scroll;
         overflow-x: hidden;
-        width: 300px;
+        width: 311px;
         background-color: #fff;
         z-index: 11;
         padding: 0 8px 48px 32px;
@@ -322,12 +322,14 @@ const Overflow = styled.div`
             top: 0;
             width: 100%;
             min-height: 80px;
-            padding: 20px 0 20px 20px;
+            padding: 20px 20px 20px 0;
             display: flex;
             flex-direction: row-reverse;
+            justify-content: space-between;
             background-color: #fff;
             z-index: 14;
-            button{
+            align-items: center;
+            button:nth-of-type(1){
                 height: 40px;
                 width: 40px;
                 padding: 8px;
@@ -341,12 +343,30 @@ const Overflow = styled.div`
                     aspect-ratio: 1 /1;
                 }
             }
+            button:nth-of-type(2){
+                display: flex;
+                flex-direction: row;
+                padding: 0;
+                align-items: center;
+                svg{
+                    height: 14px;
+                    aspect-ratio: 1 /1;
+                    margin-left: 4px;
+                }
+                span{
+                    font-size: 15px;
+                }
+            }
+            button.back{
+                display: none;
+            }
         }
         li ~ li{
             margin-bottom: 8px;
             width: 100%;
-            a{
-                display: block;
+            a, button{
+                display: flex;
+                font-size: 1em;
                 width: 100%;
                 padding: 4px 10px;
                 line-height: 24px;
@@ -357,6 +377,31 @@ const Overflow = styled.div`
                     background-color: #0000000d;
                 }
             }
+            button{
+                justify-content: space-between;
+                svg{
+                    height: 18px;
+                }
+            }
+        }
+        li.desktop{
+            display: none;
+        }
+        @media screen and (min-width: 1200px) {
+            >li.mobile{
+                display: none;
+            }
+            >li.desktop{
+                display: list-item!important;
+            }
+        }
+    }
+    ul.more{
+        li ~ li{
+            display: none;
+        }
+        li.desktop{
+            display: list-item;
         }
     }
 `
