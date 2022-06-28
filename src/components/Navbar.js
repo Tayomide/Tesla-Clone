@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 export const Navbar = () => {
     const [blur, setBlur] = useState("")
+    const [more, setMore] = useState("back")
     useEffect(() => {
       if(blur === "unblur"){
         setTimeout(() => {
