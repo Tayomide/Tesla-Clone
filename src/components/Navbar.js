@@ -48,28 +48,28 @@ export const Navbar = () => {
             </li>
         </ul>
         <Overflow className={blur}>
-            <ul>
+            <ul className={more}>
                 <li className='close'>
                     <button onClick={() => setBlur("unblur")}>
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.53 17.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.748.748 0 0 1-1.06 0 .75.75 0 0 1 0-1.06L10.94 12 5.47 6.53a.75.75 0 1 1 1.06-1.06L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47z" fill="currentColor"></path></svg>
                     </button>
                 </li>
-                <li>
+                <li className='mobile'>
                     <Link to="/">Model S</Link>
                 </li>
-                <li>
+                <li className='mobile'>
                     <Link to="/">Model 3</Link>
                 </li>
-                <li>
+                <li className='mobile'>
                     <Link to="/">Model X</Link>
                 </li>
-                <li>
+                <li className='mobile'>
                     <Link to="/">Model Y</Link>
                 </li>
-                <li>
+                <li className='mobile'>
                     <Link to="/">Solar Roof</Link>
                 </li>
-                <li>
+                <li className='mobile'>
                     <Link to="/">Solar Panels</Link>
                 </li>
                 <li>
@@ -86,6 +86,18 @@ export const Navbar = () => {
                 </li>
                 <li>
                     <Link to="/">Insurance</Link>
+                </li>
+                <li className='desktop'>
+                    <Link to="/">Cyber Truck</Link>
+                </li>
+                <li className='desktop'>
+                    <Link to="/">Roadster</Link>
+                </li>
+                <li className='desktop'>
+                    <Link to="/">Semi</Link>
+                </li>
+                <li className='desktop'>
+                    <Link to="/">News</Link>
                 </li>
                 <li>
                     <Link to="/">Powerwall</Link>
@@ -108,14 +120,13 @@ export const Navbar = () => {
                 <li>
                     <Link to="/">Investor Relations</Link>
                 </li>
-                <li>
+                <li className='mobile'>
                     <Link to="/">Shop</Link>
                 </li>
-                <li>
+                <li className='mobile'>
                     <Link to="/">Account</Link>
                 </li>
-                <li>
-                    <Link to="/">More</Link>
+                <li className='mobile'>
                 </li>
             </ul>
         </Overflow>
