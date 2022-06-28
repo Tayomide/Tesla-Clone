@@ -68,5 +68,5 @@ export const Home = () => {
 }
 
 const HomeContainer = styled.div`
-
+  width: 100%;
 `
