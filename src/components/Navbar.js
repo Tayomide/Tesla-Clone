@@ -8,6 +8,7 @@ export const Navbar = () => {
       if(blur === "unblur"){
         setTimeout(() => {
             setBlur("")
+            setMore("back")
         }, 310);
       }
     }, [blur])
@@ -52,6 +53,12 @@ export const Navbar = () => {
                 <li className='close'>
                     <button onClick={() => setBlur("unblur")}>
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.53 17.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.748.748 0 0 1-1.06 0 .75.75 0 0 1 0-1.06L10.94 12 5.47 6.53a.75.75 0 1 1 1.06-1.06L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47z" fill="currentColor"></path></svg>
+                    </button>
+                    <button className={more} onClick={() => setMore("back")}>
+                        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.75 11.025a.748.748 0 0 1-.53-1.281l5.264-5.25a.75.75 0 0 1 1.06 0l5.236 5.223a.75.75 0 1 1-1.06 1.062L8.014 6.084 3.28 10.806a.748.748 0 0 1-.53.219z" fill="currentColor" transform="rotate(270 8 8)"></path>
+                        </svg>
+                        <span>Back</span>
                     </button>
                 </li>
                 <li className='mobile'>
@@ -127,6 +134,12 @@ export const Navbar = () => {
                     <Link to="/">Account</Link>
                 </li>
                 <li className='mobile'>
+                    <button onClick={() => setMore("more")}>
+                        <span>More</span>
+                        <svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2.75 11.025a.748.748 0 0 1-.53-1.281l5.264-5.25a.75.75 0 0 1 1.06 0l5.236 5.223a.75.75 0 1 1-1.06 1.062L8.014 6.084 3.28 10.806a.748.748 0 0 1-.53.219z" fill="currentColor" transform="rotate(90 8 8)"></path>
+                        </svg>
+                    </button>
                 </li>
             </ul>
         </Overflow>
