@@ -1,20 +1,19 @@
 import styled from "styled-components"
 import { Link } from "react-router-dom"
 import { TeslaButton } from "./TeslaButton"
+import { Image } from "./Image"
+import { Text } from "./Text"
 
 export const HomeComponent = ({mobileImage, desktopImage, altText, title, leftButtonText, rightButtonText, description, buttonBackground}) => {
   return (
     <HomeComponentContainer>
-        <picture>
-            <source media="(min-width: 600px)" srcSet={desktopImage}/>
-            <source srcSet={mobileImage} />
-            <img src={desktopImage} alt={altText} />
-        </picture>
+        <Image image={desktopImage} mobileImage={mobileImage} altText={altText} />
         <HomeStatic>
-            <h1 className={buttonBackground ? "bigger" : "normal" }>{title}</h1>
-            {
-                typeof description === "string" ? <p>{description}</p> : <p>Order Online for <Link to="/">touchless delivery</Link></p>
-            }
+            <Text
+            title={title}
+            bigger= {true}
+            description={description}
+            />
             <ul>
                 { leftButtonText && 
                     <li>
@@ -49,15 +48,6 @@ const HomeComponentContainer = styled.div`
     height: 100vh;
     position: relative;
     overflow: hidden;
-    picture{
-        width: 100%;
-        height: 100%;
-        img{
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-        }
-    }
 `
 
 const HomeStatic = styled.div`
@@ -69,19 +59,25 @@ const HomeStatic = styled.div`
     flex-direction: column;
     padding: 24px;
     align-items: center;
-    h1{
-        margin-top: calc(18vh - 52px);
-    }
-    h1.bigger{
-        font-size: 36px;
-        letter-spacing: 1px;
-    }
-    h1 + p{
+    div{
         flex: 1;
-        padding: 6px 0 0 0;
-        a{
-            text-transform: capitalize;
-            border-bottom: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1{
+            margin-top: calc(18vh - 52px);
+            transition: font-size ease-in 0.3s;
+        }
+        h1.bigger{
+            font-size: 36px;
+            letter-spacing: 1px;
+        }
+        h1 + p{
+            padding: 6px 0 0 0;
+            a{
+                text-transform: capitalize;
+                border-bottom: 1px solid black;
+            }
         }
     }
     ul{
