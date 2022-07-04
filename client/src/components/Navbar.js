@@ -1,24 +1,13 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-export const Navbar = () => {
-    const [blur, setBlur] = useState("")
-    const [more, setMore] = useState("back")
-    useEffect(() => {
-      if(blur === "unblur"){
-        setTimeout(() => {
-            setBlur("")
-            setMore("back")
-        }, 310);
-      }
-    }, [blur])
-    
+export const Navbar = ({ color, blur, more, position, setBlur, setMore}) => {
   return (
-    <NavbarContainer>
-        <svg viewBox="0 0 342 35" xmlns="http://www.w3.org/2000/svg"><path d="M0 .1a9.7 9.7 0 007 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 007-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 006-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 00-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zm0 13.8h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zm0 14.1h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zM308.5 7h26a9.6 9.6 0 007-7h-40a9.6 9.6 0 007 7z" fill="#171a20"></path></svg>
+    <NavbarContainer color = {color} position = {position}>
+        <svg viewBox="0 0 342 35" xmlns="http://www.w3.org/2000/svg"><path d="M0 .1a9.7 9.7 0 007 7h11l.5.1v27.6h6.8V7.3L26 7h11a9.8 9.8 0 007-7H0zm238.6 0h-6.8v34.8H263a9.7 9.7 0 006-6.8h-30.3V0zm-52.3 6.8c3.6-1 6.6-3.8 7.4-6.9l-38.1.1v20.6h31.1v7.2h-24.4a13.6 13.6 0 00-8.7 7h39.9v-21h-31.2v-7h24zm116.2 28h6.7v-14h24.6v14h6.7v-21h-38zM85.3 7h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zm0 13.8h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zm0 14.1h26a9.6 9.6 0 007.1-7H78.3a9.6 9.6 0 007 7zM308.5 7h26a9.6 9.6 0 007-7h-40a9.6 9.6 0 007 7z" fill={color}></path></svg>
         <ul>
             <li>
-                <Link to="/">Model S</Link>
+                <Link to="/models">Model S</Link>
             </li>
             <li>
                 <Link to="/">Model 3</Link>
@@ -48,8 +37,8 @@ export const Navbar = () => {
                 >Menu</button>
             </li>
         </ul>
-        <Overflow className={blur}>
-            <ul className={more}>
+        <Overflow className={blur} onClick={(e) => setBlur("unblur")}>
+            <ul className={more} onClick={(e) => e.stopPropagation()}>
                 <li className='close'>
                     <button onClick={() => setBlur("unblur")}>
                         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.53 17.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.748.748 0 0 1-1.06 0 .75.75 0 0 1 0-1.06L10.94 12 5.47 6.53a.75.75 0 1 1 1.06-1.06L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47z" fill="currentColor"></path></svg>
@@ -62,7 +51,7 @@ export const Navbar = () => {
                     </button>
                 </li>
                 <li className='mobile'>
-                    <Link to="/">Model S</Link>
+                    <Link to="/models">Model S</Link>
                 </li>
                 <li className='mobile'>
                     <Link to="/">Model 3</Link>
@@ -86,10 +75,10 @@ export const Navbar = () => {
                     <Link to="/">Used Inventory</Link>
                 </li>
                 <li>
-                    <Link to="/">Trade-In</Link>
+                    <Link to="/tradein">Trade-In</Link>
                 </li>
                 <li>
-                    <Link to="/">Test Drive</Link>
+                    <Link to="/drive">Test Drive</Link>
                 </li>
                 <li>
                     <Link to="/">Insurance</Link>
@@ -153,15 +142,17 @@ const NavbarContainer = styled.nav`
     justify-content: space-between;
     align-items: center;
     height: 56px;
-    padding: 0 32px;
-    position: fixed;
+    padding: 0 32px 0 24px;
+    position: ${props => props.position};
     width: 100%;
     z-index: 2;
-    color: #171a20;
+    color: ${props => props.color};
     > svg{
         height: 24px;
         width: 120px;
-        margin-left: 16px;
+        @media screen and (min-width: 1200px){
+            margin-left: 16px;
+        }
     }
     > ul{
         display: flex;
@@ -175,7 +166,7 @@ const NavbarContainer = styled.nav`
                 line-height: 24px;
                 font-weight: bold;
                 padding: 4px 16px;
-                color: #171a20;
+                color: ${props => props.color};
                 height: max-content;
                 display: block;
             }
@@ -215,6 +206,7 @@ const Overflow = styled.div`
     width: 100vw;
     z-index: 10;
     transform: translateX(100vw);
+    color: #171a20;
     /* animation: blur 1s linear forwards; */
     @keyframes unblur {
         0%{
@@ -372,6 +364,7 @@ const Overflow = styled.div`
                 line-height: 24px;
                 font-weight: bold;
                 border-radius: 10px;
+                color: inherit;
                 :hover{
                     backdrop-filter: blur(16px);
                     background-color: #0000000d;

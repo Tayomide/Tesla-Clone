@@ -1,7 +1,14 @@
 import styled from "styled-components"
 import { HomeComponent } from "../components/Home"
+import { useEffect } from "react"
 
-export const Home = () => {
+export const Home = ({ setNavbarColor, setBlur, setMore, setNavbarPosition }) => {
+  useEffect(() => {
+    setNavbarColor("#171a20")
+    setBlur("")
+    setMore("back")
+    setNavbarPosition("fixed")
+  }, [])
   return (
     <HomeContainer>
         <HomeComponent
