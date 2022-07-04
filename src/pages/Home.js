@@ -8,7 +8,7 @@ export const Home = ({ setNavbarColor, setBlur, setMore, setNavbarPosition }) =>
     setBlur("")
     setMore("back")
     setNavbarPosition("fixed")
-  }, [])
+  }, [setBlur, setMore, setNavbarColor, setNavbarPosition])
   return (
     <HomeContainer>
         <HomeComponent

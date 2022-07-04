@@ -10,7 +10,7 @@ export const TestDrive = ({ setNavbarColor, setBlur, setMore, setNavbarPosition 
       setBlur("")
       setMore("back")
       setNavbarPosition("sticky")
-    }, [])
+    }, [setBlur, setMore, setNavbarColor, setNavbarPosition])
     const imageInfo = {
         1 : {
             picture : "/TDE-section-image1.avif",

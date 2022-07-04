@@ -1,5 +1,4 @@
 import styled from "styled-components"
-import { Link } from "react-router-dom"
 import { TeslaButton } from "./TeslaButton"
 import { Image } from "./Image"
 import { Text } from "./Text"

@@ -9,7 +9,7 @@ export const TradeIn = ({ setNavbarColor, setBlur, setMore, setNavbarPosition })
     setBlur("")
     setMore("back")
     setNavbarPosition("fixed")
-  }, [])
+  }, [setBlur, setMore, setNavbarColor, setNavbarPosition])
   return (
     <TradeInContainer>
       <Image image="/TIN-section1-image-desktop.avif" mobileImage="/TIN-section1-image-mobile.avif" altText="Trade-In" />
