@@ -1,6 +1,7 @@
 import { useEffect} from 'react'
 import { ImgStatTxt } from '../components/ImgStatTxt'
 import { Image } from '../components/Image'
+import { Carousel } from '../components/Carousel'
 import styled from 'styled-components'
 
 export const ModelS = ({ setNavbarColor, setBlur, setMore, setNavbarPosition }) => {
