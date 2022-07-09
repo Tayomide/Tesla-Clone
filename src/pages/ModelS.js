@@ -11,6 +11,7 @@ export const ModelS = ({ setNavbarColor, setBlur, setMore, setNavbarPosition }) 
       setMore("back")
       setNavbarPosition("fixed")
     }, [setBlur, setMore, setNavbarColor, setNavbarPosition])
+    
     return (
         <ModelSContainer>
             <Section1
