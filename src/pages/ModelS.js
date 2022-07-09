@@ -24,6 +24,7 @@ export const ModelS = ({ setNavbarColor, setBlur, setMore, setNavbarPosition }) 
                 <h2>Interior of the Future</h2>
                 <Image image="/MS-section3-image-desktop.jpg" mobileImage="/MS-section3-image-mobile.jpg" altText="Model S section 2" />
             </Section2>
+            {/* <Section3 /> */}
         </ModelSContainer>
     )
 }
