@@ -1,6 +1,6 @@
 # Project URL
 
-[Tesla Clone](https://main--stirring-beijinho-8902d3.netlify.app/)
+[Tesla Clone](https://tomiwa-tesla-clone.netlify.app/)
 
 # Project Description
 
