@@ -11,7 +11,7 @@ export const ModelS = ({ setNavbarColor, setBlur, setMore, setNavbarPosition }) 
       setMore("back")
       setNavbarPosition("fixed")
     }, [setBlur, setMore, setNavbarColor, setNavbarPosition])
-    
+
     return (
         <ModelSContainer>
             <Section1
@@ -72,6 +72,6 @@ const Section2 = styled.section`
     }
 `
 
-const Section3 = styled(Carousel)`
-    background-color: #000;
-`
+// const Section3 = styled(Carousel)`
+//     background-color: #000;
+// `

@@ -1,4 +1,4 @@
-import {useEffect, useState, useRef} from 'react'
+import {useEffect, useRef} from 'react'
 import { Video } from './Video';
 import styled from 'styled-components';
 

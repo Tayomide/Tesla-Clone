@@ -5,7 +5,7 @@ export const Video = ({video, mobileVideo}) => {
     const [desktop, setDesktop] = useState(window.innerWidth > 600)
     useEffect(() => {
         const onResize = (e) => {
-            {window.innerWidth <= 600 ? setDesktop(false) : setDesktop(true)}
+            window.innerWidth <= 600 ? setDesktop(false) : setDesktop(true)
         };
         window.addEventListener("resize", onResize)
         return () => {
