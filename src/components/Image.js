@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 const PictureSource = (props) => {
     if(props.mobileImage){
-        console.log(props)
         return (
             <Picture>
                 <source media="(min-width: 600px)" srcSet={props.image}/>
