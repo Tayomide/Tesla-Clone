@@ -69,3 +69,7 @@ const Section2 = styled.section`
         }
     }
 `
+
+const Section3 = styled(Carousel)`
+    background-color: #000;
+`
