@@ -6,6 +6,7 @@ import { Navbar } from "./components/Navbar"
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { ModelS } from "./pages/ModelS";
+import { ComingSoon } from "./pages/ComingSoon";
 
 const App = () => {
   const [navbarColor, setNavbarColor] = useState("#171a20")
