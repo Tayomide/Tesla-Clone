@@ -9,27 +9,27 @@ export const Navbar = ({ color, blur, more, position, setBlur, setMore}) => {
                 <Link to="/models">Model S</Link>
             </li>
             <li>
-                <Link to="/">Model 3</Link>
+                <Link to="/comingsoon">Model 3</Link>
             </li>
             <li>
-                <Link to="/">Model X</Link>
+                <Link to="/comingsoon">Model X</Link>
             </li>
             <li>
-                <Link to="/">Model Y</Link>
+                <Link to="/comingsoon">Model Y</Link>
             </li>
             <li>
-                <Link to="/">Solar Roof</Link>
+                <Link to="/comingsoon">Solar Roof</Link>
             </li>
             <li>
-                <Link to="/">Solar Panels</Link>
+                <Link to="/comingsoon">Solar Panels</Link>
             </li>
         </ul>
         <ul>
             <li>
-                <Link to="/">Shop</Link>
+                <Link to="/comingsoon">Shop</Link>
             </li>
             <li>
-                <Link to="/">Account</Link>
+                <Link to="/comingsoon">Account</Link>
             </li>
             <li className="mobile">
                 <button onClick={() => setBlur("blur")}
@@ -53,25 +53,25 @@ export const Navbar = ({ color, blur, more, position, setBlur, setMore}) => {
                     <Link to="/models">Model S</Link>
                 </li>
                 <li className='mobile'>
-                    <Link to="/">Model 3</Link>
+                    <Link to="/comingsoon">Model 3</Link>
                 </li>
                 <li className='mobile'>
-                    <Link to="/">Model X</Link>
+                    <Link to="/comingsoon">Model X</Link>
                 </li>
                 <li className='mobile'>
-                    <Link to="/">Model Y</Link>
+                    <Link to="/comingsoon">Model Y</Link>
                 </li>
                 <li className='mobile'>
-                    <Link to="/">Solar Roof</Link>
+                    <Link to="/comingsoon">Solar Roof</Link>
                 </li>
                 <li className='mobile'>
-                    <Link to="/">Solar Panels</Link>
+                    <Link to="/comingsoon">Solar Panels</Link>
                 </li>
                 <li>
-                    <Link to="/">Existing Inventory</Link>
+                    <Link to="/comingsoon">Existing Inventory</Link>
                 </li>
                 <li>
-                    <Link to="/">Used Inventory</Link>
+                    <Link to="/comingsoon">Used Inventory</Link>
                 </li>
                 <li>
                     <Link to="/tradein">Trade-In</Link>
@@ -80,46 +80,46 @@ export const Navbar = ({ color, blur, more, position, setBlur, setMore}) => {
                     <Link to="/drive">Test Drive</Link>
                 </li>
                 <li>
-                    <Link to="/">Insurance</Link>
+                    <Link to="/comingsoon">Insurance</Link>
                 </li>
                 <li className='desktop'>
-                    <Link to="/">Cyber Truck</Link>
+                    <Link to="/comingsoon">Cyber Truck</Link>
                 </li>
                 <li className='desktop'>
-                    <Link to="/">Roadster</Link>
+                    <Link to="/comingsoon">Roadster</Link>
                 </li>
                 <li className='desktop'>
-                    <Link to="/">Semi</Link>
+                    <Link to="/comingsoon">Semi</Link>
                 </li>
                 <li className='desktop'>
-                    <Link to="/">News</Link>
+                    <Link to="/comingsoon">News</Link>
                 </li>
                 <li>
-                    <Link to="/">Powerwall</Link>
+                    <Link to="/comingsoon">Powerwall</Link>
                 </li>
                 <li>
-                    <Link to="/">Commercial Energy</Link>
+                    <Link to="/comingsoon">Commercial Energy</Link>
                 </li>
                 <li>
-                    <Link to="/">Utilities</Link>
+                    <Link to="/comingsoon">Utilities</Link>
                 </li>
                 <li>
-                    <Link to="/">Charging</Link>
+                    <Link to="/comingsoon">Charging</Link>
                 </li>
                 <li>
-                    <Link to="/">Find Us</Link>
+                    <Link to="/comingsoon">Find Us</Link>
                 </li>
                 <li>
-                    <Link to="/">Support</Link>
+                    <Link to="/comingsoon">Support</Link>
                 </li>
                 <li>
-                    <Link to="/">Investor Relations</Link>
+                    <Link to="/comingsoon">Investor Relations</Link>
                 </li>
                 <li className='mobile'>
-                    <Link to="/">Shop</Link>
+                    <Link to="/comingsoon">Shop</Link>
                 </li>
                 <li className='mobile'>
-                    <Link to="/">Account</Link>
+                    <Link to="/comingsoon">Account</Link>
                 </li>
                 <li className='mobile'>
                     <button onClick={() => setMore("more")}>
