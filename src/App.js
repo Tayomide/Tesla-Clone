@@ -30,6 +30,7 @@ const App = () => {
           <Route exact path="/tradein" element={<TradeIn setNavbarColor={setNavbarColor} setBlur={setBlur} setMore={setMore} setNavbarPosition={setNavbarPosition}/>} />
           <Route exact path="/drive" element={<TestDrive setNavbarColor={setNavbarColor} setBlur={setBlur} setMore={setMore} setNavbarPosition={setNavbarPosition}/>} />
           <Route exact path="/models" element={<ModelS setNavbarColor={setNavbarColor} setBlur={setBlur} setMore={setMore} setNavbarPosition={setNavbarPosition}/>} />
+          <Route exact path="/comingsoon" element={<ComingSoon setNavbarColor={setNavbarColor} setBlur={setBlur} setMore={setMore} setNavbarPosition={setNavbarPosition}/>} />
         </Routes>
       </Router>
     </AppContainer>
