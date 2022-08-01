@@ -1,14 +1,14 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
-export const Text = ({ title, description, bigger = false}) => {
+export const Text = ({ title, description, bigger = false, TextRef, HeaderRef}) => {
   return (
     <TextContainer>
-        <h1 className={bigger ? "bigger" : "normal" }>{title}</h1>
+        <h1 className={bigger ? "bigger" : "normal" } ref={HeaderRef}>{title}</h1>
         {
             typeof description === "string" ?
-            <p>{description}</p> :
-            <p>Order Online for <Link to="'/'">touchless delivery</Link></p>
+            <p ref={TextRef}>{description}</p> :
+            <p ref={TextRef}>Order Online for <Link to="'/'">touchless delivery</Link></p>
         }
 
     </TextContainer>

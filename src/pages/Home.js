@@ -18,6 +18,7 @@ export const Home = ({ setNavbarColor, setBlur, setMore, setNavbarPosition }) =>
           title = "Model 3"
           leftButtonText = "Custom Order"
           rightButtonText = "Existing Inventory"
+          button = {true}
         />
         <HomeComponent
           mobileImage = "/MY-Homepage-Mobile.jpg"
